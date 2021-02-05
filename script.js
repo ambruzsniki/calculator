@@ -1,7 +1,7 @@
 class Calculator{
   getValues(){
-    var n1 = document.getElementById("number1").value;
-    var n2 = document.getElementById("number2").value;
+    let n1 = document.getElementById("number1").value;
+    let n2 = document.getElementById("number2").value;
     console.log("First number's type in input: " + typeof n1);
     console.log("Second number's type in input: " + typeof n1);
 
@@ -19,8 +19,8 @@ class Calculator{
 
   convertToNumber(...strings){
     console.log("...rest operator: " + strings);
-    var result = strings.map(function (string) {
-      var number = Number(string);
+    let result = strings.map(function (string) {
+      let number = Number(string);
       return number;
     });
 
@@ -41,7 +41,7 @@ const one = 1;
 methodSelect.addEventListener("change", () => { method = methodSelect.value; }, false);
 
 equalsBtn.addEventListener("click", () => {
-  var values = calculator.getValues();
+  let values = calculator.getValues();
   plus();
 
   switch (method) {
@@ -65,7 +65,7 @@ let plus =(function(){
 
 return function(){
   sum += one;
-  var times = sum > 1 ? sum + " times" : "once";
+  let times = sum > 1 ? sum + " times" : "once";
   return console.log("Calculator has been used " + times);
 }
 })();
