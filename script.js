@@ -65,7 +65,7 @@ let plus =(function(){
 
 return function(){
   sum += one;
-  let times = sum > 1 ? sum + " times" : "once";
+  let times = sum > 1 ? (sum == 2 ? "twice" : sum + " times") : "once";
   return console.log("Calculator has been used " + times);
 }
 })();
